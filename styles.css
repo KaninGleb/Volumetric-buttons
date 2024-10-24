@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(156, 41, 74);
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+}
+
+.text {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.link {
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: default;
+}
+
+.button {
+    padding: 15px 55px;
+    border: none;
+    border-radius: 6px;
+    color: #282a2e;
+    background-color: #ffffff;
+    cursor: pointer;
+    box-shadow: 15px 15px 0 0 #18191C;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    transition: box-shadow .2s ease, transform .2s ease;
+    margin: 13px;
+    min-width: 13em;
+}
+
+.button.submit:active {
+    box-shadow: 5px 5px 0 0 #00ff2a;
+    transform: translate(0px, 10px);
+    color: #00ff2a;
+}
+
+.button.dismiss:active {
+    box-shadow: 5px 5px 0 0 #ff0000;
+    transform: translate(0px, 10px);
+    color: #ff0000;
+}
+
+.submit:hover, .dismiss:hover, .rainbow-button:hover {
+    transform: scale(105%);
+}
+
+.rainbow-button:hover {
+    animation: rainbow 4s infinite;
+}
+
+@keyframes rainbow {
+    0% { background-color: #FF5733; color: white; }  
+    14% { background-color: #33FF57; color: black; } 
+    28% { background-color: #3357FF; color: white; } 
+    42% { background-color: #FF33A1; color: black; } 
+    57% { background-color: #FFD733; color: black; } 
+    71% { background-color: #33FFD7; color: black; } 
+    85% { background-color: #A133FF; color: white; } 
+    100% { background-color: #FF5733; color: white; } 
+}
